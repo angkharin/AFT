@@ -1,415 +1,602 @@
-<!DOCTYPE html>
 <html>
+    <head>
+        <link rel="icon" href="Image/โลโก้อวท ใหม่.png" type="image/x-icon">
+      </head>
+      
 <head>
-    <link rel="icon" href="Image/โลโก้อวท ใหม่.png" type="image/x-icon">
+
     <title>ข่าวประชาสัมพันธ์</title>
-    <img src="Image/ป้ายอวท.jpg" width="auto" height="auto">
+     <img class="sticky-image" src="Image/ป้ายอวท.jpg" alt="ป้ายอวท">
+
     <style>
-        /* Body Background */
-        body {
-            background-image: url('Image/พื้นหลัง.png');
-            background-size: cover;
-            background-position: center;
+    /* เนื้อหาด้านล่าง */
+    main {
+      padding-top: 200px; /* เว้นพื้นที่ให้รูปด้านบน */
+      max-width: 800px;
+      margin-bottom: 200px;
+    }
+    
+          body {
+            background-image: url('Image/พื้นหลัง.png'); /* Specify background image path */
+            background-size: cover; /* Scale background image to cover entire screen */
+            background-position: center; /* Center background image */
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            margin: 0;
+            align-items: center;
             font-family: Arial, Helvetica, sans-serif;
+            color: rgb(0, 0, 0);
+            margin: 0;
         }
-
-        /* Navbar Styles */
-        .navbar {
-            background-color: #333;
+        .navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+        /* Content centering */
+        .center-content {
             display: flex;
             justify-content: center;
-            width: 100%;
-            padding: 1rem 0;
-        }
-        .navbar a {
-            font-size: 16px;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        .navbar a:hover {
-            background-color: red;
-        }
-
-        /* Center Alignment for Content */
-        .center {
-            display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            flex-direction: column;
             text-align: center;
-            width: 100%;
-            flex-direction: column;
-            margin-bottom: 10px;
+            max-width: 700px;
+            margin-bottom: 20px;
         }
 
-        /* Images Styling */
-        .center img {
-            height: auto;
-            margin: 0px;
-            display: flex;
-            justify-content: center;
-            width: 500px;
-        }
-
+        /* Styling for images */
         img {
             max-width: 100%;
             height: auto;
         }
-        /* Headings Styling */
-        .center h1 {
-          font-size: 24px;
-          text-align: center;
-          margin: 5px 0;
-      }
-    </style>
+
+        /* Additional spacing for different sections */
+        .section-title {
+            width: 100%;
+            max-width: 700px;
+     
+        }
+.navbar-left {
+  margin-left: 20px;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 20px;
+  margin-left: -200px; /* ปรับค่าตามที่ต้องการ */
+}
+
+
+.sticky-navbar {
+  position: fixed;
+  top: 120px; /* ระยะห่างจากด้านบน */
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+ .sticky-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1000;
+    }
+    
+.sticky-navbar a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.sticky-navbar a:hover {
+  background-color: red;
+}
+
+.navbar-left {
+  margin-left: 20px;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-left: -200px; /* ปรับตำแหน่งกลางตามต้องการ */
+}
+
+.menu-label {
+  font-size: 16px;
+  color: red;
+}
+
+
+
+       </style>
 </head>
 <body>
 
     <!-- Navbar Section -->
-    <div class="navbar">
-        <a href="index.html">หน้าหลัก</a>
-        <a href="information.html">ข้อมูลทั่วไปขององค์การ</a>
-        <a href="address.html">สถานที่ตั้งขององค์การ</a>
-    </div>
+     <div class="sticky-navbar">
+  <div class="navbar-left">
+    <b><span class="menu-label">ข่าวประชาสัมพันธ์</span></b>
+  </div>
+  <div class="navbar-center">
+    <a href="index.html">หน้าหลัก</a>
+    <a href="information.html">ข้อมูลทั่วไปขององค์การ</a>
+    <a href="address.html">สถานที่ตั้งขององค์การ</a>
+  </div>
+</div>
 
-    <!-- Content Section -->
-    <div class="center">
-        <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม</h1>
-        <p>โครงการอนุรักษ์พันธุกรรมพืชอันเนื่องมาจาก พระราชดำริ สมเด็จพระเทพรัตนราชสุดาฯ สยามบรมราชกุมารี (อพ.สธ.)
-        <br>อบรมแกนนำงานสวนพฤกษศาสตร์โรงเรียน</p>
-        <p>วันที่ 6 กันยายน พ.ศ.2567</p>
-        <img src="Image/โครงการ1.png" alt="โครงการ1">
-    </div>
-
-    <div class="center">
-        <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม</h1>
-        <p>โครงการส่งเสริมทักษะด้านภาษาไทย (ประกวดคัดลายมือ)</p>
-        <p>วันที่ 30 สิงหาคม 2567</p>
-        <img src="Image/โครงการ2-removebg-preview.png" width="500" height="400" style="margin: 20px;">    
-      </div>
 
 <div class="center">
-  <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
+  <h1 style="margin-top: 200px;">แจ้งกำหนดการจัดกิจกรรม<h1>
   </div>
-
   <div class="center">
     โครงการอบรมเสริมศักยภาพผู้นำ</div>
     <div class="center">
      องค์การนักวิชาชีพในอนาคตแห่งประเทศไทย วิทยลัยเทคนิคจันทบุรี</div>
 
      <div class="center">
-      <br>วันที่ 24 - 25 สิงหาคม พ.ศ.2567
+      <br>วันที่ 23 สิงหาคม พ.ศ.2568
       </div>
-
-      <div class="center">
-        <img src="Image/โครงการ3.png" width="500" height="300" style="margin: 20px;">
-      </div>
-
+        <img src="Image/โครงการ1.jpg" width="500" height="400" style="margin: 20px;">
+       
         <div class="center">
           <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
           </div>
-        
 <div class="center">
  งานประชุมวิชาการองค์การนักวิชาชีพในอนาคตแห่งประเทศไทย</div>
  <div class="center">
 การแข่งขันทักษะวิชาชีพและทักษะพื้นฐาน ระดับสถานศึกษา</div>
 <div class="center">
- ประจำปีการศึกษา 2567</div>
+ ประจำปีการศึกษา 2568</div>
         
             <div class="center">
-            <br>วันที่ 21 - 23 สิงหาคม พ.ศ.2567
+            <br>วันที่ 22 สิงหาคม พ.ศ.2568
           </div>
         
             <div class="center">
-            <img src="Image/โครงการ4.png" width="500" height="300" style="margin: 20px;">
+            <img src="Image/โครงการ2.jpg" width="500" height="300" style="margin: 20px;">
             </div>
-
-            <div class="center">
-<h1>ขอเชิญชวน นักเรียน ระดับชั้น ปวช.2 และ ปวช.3 (ยกเว้นฝึกงาน) เข้าร่วมกิจกรรม<h1>
-</div>
-
-<div class="center">
-โครงการอบรมคุณธรรม จริยธรรม</div>
-<div class="center">
-สำหรับนักเรียน ปวช.2 และ ปวช.3</div>
-
-<div class="center">
-  <br>วันที่ 21 สิงหาคม พ.ศ.2567
-</div>
-
-<div class="center">
-  <img src="Image/โครงการ5.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
-    </div>
-
-    <div class="center">
-โครงการศึกษาธรรมชาติ และปลูกป่าทดแทน</div>
-
-<div class="center">
-  <br>วันที่ 17 สิงหาคม พ.ศ.2567
-</div> 
-
-<div class="center">
-  <img src="Image/โครงการ6.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>เชิญร่วม<h1>
-    </div>
-
-    <div class="center">
-ประกวดมารยาทไทย</div>
-
-<div class="center">
-  <br>วันที่ 15 สิงหาคม พ.ศ.2567
-</div>
-
-<div class="center">
-  <img src="Image/โครงการ7.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวน นักเรียน นักศึกษา วิทยลัยเทคนิคจันทบุรี เข้าร่วมกิจกรรม<h1>
-    </div>
-
-    <div class="center">
-      โครงการอบรมส่งเสริมความรู้ความสามารถ</div>
-      <div class="center">
-ทางด้านเทคโนโลยีสื่อสารสนเทศและดิจิทัล</div>
-
-<div class="center">
-  <br>วันที่ 14 สิงหาคม พ.ศ.2567
-</div>
-
-<div class="center">
-  <img src="Image/โครงการ8-removebg-preview.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวน นักเรียน นักศึกษา ร่วมส่งผลงานประกวดในโครงการ<h1>
-    </div>
-
-    <div class="center">
-การประกวดการออกแบบกระเป๋าถือสตรีจากเสื่อกกจันทบูร</div>
-<div class="center">
-วิทยลัยเทคนิคจันทบุรี ประจำปีการศึกษา 2567</div>
-
-<div class="center">
-  <br>วันที่ 2 สิงหาคม พ.ศ.2567
-</div>
-
-<div class="center">
-  <img src="Image/โครงการ9.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวนเข้าร่วม<h1>
-    </div>
-
-    <div class="center">
-      โครงการส่งเสริมการเรียนรู้ วัตนธรรมต่างประเทศ อาเซียน
-</div>
-
-    <div class="center">
-      <br>วันที่ 31 กรกฏาคม พ.ศ.2567
-    </div>
-
-    <div class="center">
-      <img src="Image/โครงการ10-removebg-preview.png" width="500" height="300" style="margin: 20px;">
-      </div>
-
-      <div class="center">
-        <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรมสร้างภาพลักษณ์อาชีวศึกษา<h1>
-        </div>
-
         <div class="center">
-          โครงการ "อวท.จิตอาสา"</div>
-
-          <div class="center">
-            <br>วันที่ 26 กรกฏาคม พ.ศ.2567
+          <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
           </div>
 
-          <div class="center">
-            <img src="Image/โครงการ11.png" width="500" height="300" style="margin: 20px;">
+ <div class="center">
+การแข่งขันทักษะวิชาชีพและทักษะพื้นฐาน ระดับสถานศึกษา</div>
+<div class="center">
+ ประจำปีการศึกษา 2568</div>
+        
+            <div class="center">
+            <br>วันที่ 22 สิงหาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ3.jpg" width="500" height="300" style="margin: 20px;">
             </div>
 
-            <div class="center">
-              <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
-              </div>
-<div class="center">
-  โครงการส่งเสริมการเป็นผู้ประกอบการ Start Up"</div>
-  <div class="center">
-(การสร้างผู้ประกอบการรุ่นใหม่)</div>
-
-<div class="center">
-  <br>วันที่ 24 กรกฏาคม พ.ศ.2567
-</div>
-
-<div class="center">
-  <img src="Image/โครงการ12-removebg-preview.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวน<h1>
-    </div>
-
-    <div class="center">
-      โครงการสัมมนาทางวิชาการและวิชา สำหรับนักศึกษา ปวส.2</div>
-
-      <div class="center">
-        <br>วันที่ 24 กรกฏาคม พ.ศ.2567
-      </div>
-
-      <div class="center">
-        <img src="Image/โครงการ13.png" width="500" height="300" style="margin: 20px;">
-        </div>
-
-<div class="center">
-<h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม และร่วมบริจาคเทียน และ หลอดไฟฟ้า<h1>
-</div>
-
-<div class="center">
-  โครงการวันอาสาฬหบูชา และ วันเข้าพรรษา</div>
-
-  <div class="center">
-    <br>วันที่ 19 กรกฏาคม พ.ศ.2567
-  </div>
-
-  <div class="center">
-    <img src="Image/โครงการ14.png" width="500" height="300" style="margin: 20px;">
-    </div>
-
-    <div class="center">
-      <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
-      </div>
-
-      <div class="center">
-        โครงการกิจกรรมส่งเสริมความรู้ทางด้านคณิตศาสตร์ (Methematics Camp)</div>
-
         <div class="center">
-          <br>วันที่ 5 กรกฏาคม พ.ศ.2567
-        </div>
-
-        <div class="center">
-          <img src="Image/โครงการ15.jpg" width="500" height="300" style="margin: 20px;">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา สมัครเข้าร่วมการประกวดและเข้าร่วมกิจกรรม<h1>
           </div>
 
+ <div class="center">
+การประกวดสิ่งประดิษฐ์จากของเหลือใช้</div>
 <div class="center">
-<h1>ขอเชิญชวน นักเรียน นักศึกษาร่วมส่งผลงานเข้าประกวด<h1>
-</div>
+ ประจำปีการศึกษา 2568</div>
 
-<div class="center">
-โครงการประกวดสิ่งประดิษฐ์จากของเหลือใช้</div>
+        
+            <div class="center">
+            <br>วันที่ 20 สิงหาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ4.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+  
+        <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา วิทยลัยเทคนิคจันทบุรี เข้าร่วมกิจกรรม<h1>
+          </div>
 
+ <div class="center">
+โครงการส่งเสริมสัปดาห์วันวิทยาศาสตร์</div>
 <div class="center">
-<br>วันที่ 3 กรกฏาคม พ.ศ.2567
-</div>
+ ประจำปีการศึกษา 2568</div>
+        
+            <div class="center">
+            <br>วันที่ 20 สิงหาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ5.jpg" width="500" height="300" style="margin: 20px;">
+            </div>
+            
+        <div class="center">
+          <h1>ขอเชิญชวน นักเรียน ระดับชั้น ปวช.2 และ ปวช.3 (ยกเว้นฝีกงาน) เข้าร่วมกิจกรรม<h1>
+          </div>
 
-<div class="center">
-  <img src="Image/โครงการ16.jpg" width="500" height="300" style="margin: 20px;">
-  </div>
+ <div class="center">
+โครงการอบรมคุณธรรม จริยธรรม สำหรับนักเรียน ปวช.2 และ ปวช.3</div>
+
+        
+            <div class="center">
+            <br>วันที่ 6 สิงหาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ6.jpg" width="500" height="300" style="margin: 20px;">
+            </div>
       
-<div class="center">
-<h1>ขอเชิญชวน... นักเรียน นักศึกษา คณะครูและบุคลากร ทุกท่าน<h1>
-</div>
+        <div class="center">
+          <h1>กิจกรรมสร้างภาพลักษณ์อาชีวศีกษา<h1>
+          </div>
 
+ <div class="center">
+โครงการ "อวท.จิตอาสา"</div>
+
+        
+            <div class="center">
+            <br>วันที่ 25 กรกฎาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ7.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+        <div class="center">
+          <h1>เชิญชวน นักเรียน นักศึกษา ใช้สิทธิออกเสียงเลือกตั้งนายก อวท.<h1>
+          </div>
+
+ <div class="center">
+การเลือกตั้งนายกองค์การนักวิชาชีพในอนาคตแห่งประเทศไทย</div>
 <div class="center">
+ วิทยลัยเทคนิคจันทบุรี ประจำปีการศึกษา 2568</div>
+
+        
+            <div class="center">
+            <br>วันที่ 23 กรกฎาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ8.jpg" width="500" height="300" style="margin: 20px;">
+            </div>  
+
+        <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม และ ร่วมบริจาคเทียน และหลอดไฟฟ้า<h1>
+          </div>
+
+ <div class="center">
+ในโครงการวันอาสฬหบูชา และ วันเข้าพรรษา</div>
+
+
+        
+            <div class="center">
+            <br>วันที่ 4 กรกฎาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ9.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+        <div class="center">
+          <h1>แจ้งกำหนดจัดกิจกรรม และ ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการอบรมเสริมสร้างความรู้ด้านภูมิปัญญาท้องถิ่นจากผู้เชี่ยวชาญ</div>
+
+        
+            <div class="center">
+            <br>วันที่ 4 กรกฎาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ10.jpg" width="500" height="300" style="margin: 20px;">
+            </div>  
+            
+       <div class="center">
+          <h1>แจ้งกำหนดจัดกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการแข่งขันทักษะวิชาชีพการเลขานุการ</div>
+
+        
+            <div class="center">
+            <br>วันที่ 2 กรกฎาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ11.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+       <div class="center">
+          <h1>แจ้งกำหนดการจัดกิจกรรม และ เชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการพัฒนาส่งเสริมความรู้ความสามารถ ทางด้านเทคโนโลยี สื่อสารสนเทศและดิจิทัล</div>
+
+
+        
+            <div class="center">
+            <br>วันที่ 30 มิถุนายน พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ12.jpg" width="500" height="300" style="margin: 20px;">
+            </div>   
+            
+        <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการส่งเสริมความรู้ด้านคณิตศาสตร์</div>
+
+
+        
+            <div class="center">
+            <br>วันที่ 30 มิถุนายน พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ13.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+        <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา คณะครูและบุคลากร ทุกท่าน เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
 โครงการรณรงค์ป้องกันและแก้ไขปัญหายาเสพติด TO BE NUMBER ONE</div>
 
-<div class="center">
-  <br>วันที่ 26 มิถุนาคม พ.ศ.2567
-  </div>
-
-  <div class="center">
-    <img src="Image/โครงการ17.png" width="500" height="300" style="margin: 20px;">
-    </div>
-
-    <div class="center">
-      <h1>ขอเชิญชวน นักเรียน นักศึกษา ใช้สิทธิออกเสียงเลือกตั้งนายก อวท.<h1>
-      </div>
-
-<div class="center">
-การเลือกตั้งนายกองค์การนักวิชาชีพในอนาคตแห่งประเทศไทย</div>
         
-<div class="center">
-  <br>วันที่ 19 มิถุนาคม พ.ศ.2567
-  </div>
-
-  <div class="center">
-    <img src="Image/โครงการ18.png" width="500" height="300" style="margin: 20px;">
-    </div>
-
-<div class="center">
-<h1>แจ้งกำหนดการ<h1>
-</div>
-
-<div class="center">
-โครงการปฐมนิเทศ อบรมคุณธรรม จริยธรรม</div>
-
-<div class="center">
-  <br>วันที่ 8-9 มิถุนาคม พ.ศ.2567
-  </div>
-
-  <div class="center">
-    <img src="Image/โครงการ19.png" width="500" height="300" style="margin: 20px;">
-    </div>
-
-    <div class="center">
-      <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
-      </div>
-
-      <div class="center">
-การปฐมนิเทศสมาชิกใหม่ องค์การนักวิชาชีพอนาคตแห่งประเทศไทย</div>
-
-<div class="center">
-  <br>วันที่ 5 มิถุนาคม พ.ศ.2567
-  </div>
-
-
-<div class="center">
-  <img src="Image/โครงการ20.jpg" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
-    </div>
-
-    <div class="center">
-โครงการอบรมส่งเสริมการเป็นผู้ประกอบการและการหารายได้ระหว่างเรียน</div>
-      
-<div class="center">
-  <br>วันที่ 31 มกราคม พ.ศ.2567
-  </div>
-  
-<div class="center">
-  <img src="Image/โครงการ21.png" width="500" height="300" style="margin: 20px;">
-  </div>
-
-  <div class="center">
-    <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
-    </div>
-
-    <div class="center">
-      โครงการแข่งขันกีฬาสีภายใน</div>
-
-      <div class="center">
-        <br>วันที่ 15-19 มกราคม พ.ศ.2567
-        </div>
+            <div class="center">
+            <br>วันที่ 26 มิถุนายน พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ14.jpg" width="500" height="300" style="margin: 20px;">
+            </div> 
 
         <div class="center">
-          <img src="Image/โครงการ22.png" width="500" height="300" style="margin: 20px;">
+          <h1>แจ้งกำหนดจัดกิจกรรม<h1>
           </div>
+
+ <div class="center">
+การปฐมนิเทศสมาชิกใหม่องค์การนักวิชาชีพในอนาคตแห่งประเทศไทย</div>
+<div class="center">
+ ประจำปีการศึกษา 2568</div>
+
+
+        
+            <div class="center">
+            <br>วันที่ 11 มิถุนายน พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ15.jpg" width="500" height="300" style="margin: 20px;">
+            </div> 
+
+        <div class="center">
+          <h1>ขอเชิญชวนสมาชิกชมรมวิชาชีพทุกคนเข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการร่วมใจรักษ์พิทักษ์ความสะอาด</div>
+
+        
+            <div class="center">
+            <br>วันที่ 6 มิถุนายน พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ16.jpg" width="500" height="300" style="margin: 20px;">
+            </div> 
+
+         <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการศึกษาธรรมชาติ และปลูกป่าทดแทน</div>
+
+        
+            <div class="center">
+            <br>วันที่ 30 พฤษภาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ17.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+         <div class="center">
+          <h1>ประชาสัมพันธ์การจัดกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการอนุรักษ์พันธุกรรมพืชอันเนื่องมาจากพระราชดำริ</div>
+
+        
+            <div class="center">
+            <br>วันที่ 23 พฤษภาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ18.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+         <div class="center">
+          <h1>แจ้งกำหนดการ<h1>
+          </div>
+
+ <div class="center">
+โครงการปฐมนิเทศ อบรมคุณธรรม จริยธรรมและคุณลักษณะอันพึงประสงค์</div>
+ <div class="center">
+สำหรับนักเรียน นักศึกษาใหม่ ประจำปีการศึกษา 2568</div>
+
+        
+            <div class="center">
+            <br>วันที่ 2 พฤษภาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ19.jpg" width="500" height="300" style="margin: 20px;">
+            </div>  
+
+          <div class="center">
+          <h1>แจ้งกำหนดการ<h1>
+          </div>
+
+ <div class="center">
+โครงการปฐมนิเทศ อบรมคุณธรรม จริยธรรมและคุณลักษณะอันพึงประสงค์</div>
+ <div class="center">
+สำหรับนักเรียน นักศึกษาใหม่ ประจำปีการศึกษา 2568</div>
+
+        
+            <div class="center">
+            <br>กลุ่มที่1 วันที่ 30 เมษายน พ.ศ.2568
+          </div>
+                      <div class="center">
+            <br>กลุ่มที่2 วันที่ 1 พฤษภาคม พ.ศ.2568
+          </div>
+        
+            <div class="center">
+            <img src="Image/โครงการ20.jpg" width="500" height="300" style="margin: 20px;">
+            </div>  
+           
+          <div class="center">
+          <h1>แจ้งกำหนดการจัดกิจกรรม และเชิญชวนนักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการมหกรรมจัดแสดงนวัตกรรมสิ่งประดิษฐ์ของนักเรียน นักศึกษา</div>
+ <div class="center">
+วิทยลัยเทคนิคจันทบุรี ประจำปีการศึกษา 2567</div>
+
+        
+            <div class="center">
+            <br>วันที่ 29 มกราคม พ.ศ.2568
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ21.jpg" width="500" height="300" style="margin: 20px;">
+            </div>  
+           
+         <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+การแข่งขันกีฬาภายในวิทยาลัยเทคนิคจันทบุรี</div>
+ <div class="center">
+ประจำปีการศึกษา 2567</div>
+
+           <div class="center">
+            <br>วันที่ 22 - 24 มกราคม พ.ศ.2568
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ22.jpg" width="500" height="300" style="margin: 20px;">
+            </div>  
+
+     <div class="center">
+          <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการส่งเสริมการเป็นผู้ประกอบการจากผลผลิตพื้นเมืองจันทบุรี</div>
+
+
+           <div class="center">
+            <br>วันที่ 20 มกราคม พ.ศ.2568
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ23.jpg" width="500" height="300" style="margin: 20px;">
+            </div>
+
+         <div class="center">
+          <h1>แจ้งกำหนดการจัดกิจกรรม และเชิญชวนนักเรียน นักศึกษา เข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+เสริมสร้างวินัยความปลอดภัยในการทำงาน (Safety-First)</div>
+ <div class="center">
+ประจำปีการศึกษา 2567</div>
+
+           <div class="center">
+            <br>วันที่ 10 มกราคม พ.ศ.2568
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ24.jpg" width="500" height="300" style="margin: 20px;">
+            </div> 
+
+                     <div class="center">
+          <h1>แจ้งกำหนดการจัดกิจกรรมขอเชิญชวนสมาชิกชมรมวิชาชีพทุกคนเข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการส่งเสริมมาตรฐานวิชาชีพการเลขานุการ</div>
+
+
+           <div class="center">
+            <br>วันที่ 27 พฤศจิกายน พ.ศ.2567
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ25.jpg" width="500" height="300" style="margin: 20px;">
+            </div> 
+
+  <div class="center">
+          <h1>แจ้งกำหนดการจัดกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการส่งเสริมการพัฒนาผลิตภัณฑ์ชุมชน(เสื่อจันทบู)</div>
+
+
+           <div class="center">
+            <br>วันที่ 13 พฤศจิกายน พ.ศ.2567
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ26.jpg" width="500" height="300" style="margin: 20px;">
+            </div>            
+
+ <div class="center">
+          <h1>ขอเชิญชวน นักเรียน นักศึกษา ทุกแผนกวิชาเข้าร่วมกิจกรรม<h1>
+          </div>
+
+ <div class="center">
+โครงการประกวดมารยาทไทย</div>
+
+
+           <div class="center">
+            <br>วันที่ 30 ตุลาคม พ.ศ.2567
+          </div>
+
+        
+            <div class="center">
+            <img src="Image/โครงการ27.jpg" width="500" height="300" style="margin: 20px;">
+            </div>    
+
 </section>
 </body>
 </html>
