@@ -2,11 +2,37 @@
     <head>
         <link rel="icon" href="Image/โลโก้อวท ใหม่.png" type="image/x-icon">
       </head>
+      
 <head>
+
     <title>สถานที่ตั้งขององค์การ</title>
-    <img src="Image/ป้ายอวท.jpg" width="auto" height="auto">
+     <img class="sticky-image" src="Image/ป้ายอวท.jpg" alt="ป้ายอวท">
 
     <style>  
+    .sticky-image {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1000;
+    }
+    .sticky-navbar {
+      position: fixed;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1000;
+    }
+
+    /* เนื้อหาด้านล่าง */
+    main {
+      padding-top: 200px; /* เว้นพื้นที่ให้รูปด้านบน */
+      max-width: 800px;
+      margin-bottom: 200px;
+    }
+    
           body {
             background-image: url('Image/พื้นหลัง.png'); /* Specify background image path */
             background-size: cover; /* Scale background image to cover entire screen */
@@ -20,7 +46,7 @@
         }
 
         /* Navbar styling */
-        .navbar {
+        .sticky-navbar {
             background-color: #333;
             display: flex;
             justify-content: center;
@@ -28,7 +54,7 @@
             padding: 1rem 0;
         }
 
-        .navbar a {
+        .sticky-navbar a {
             font-size: 16px;
             color: white;
             text-align: center;
@@ -36,7 +62,7 @@
             text-decoration: none;
         }
 
-        .navbar a:hover {
+        .sticky-navbar a:hover {
             background-color: red;
         }
 
@@ -61,18 +87,21 @@
         .section-title {
             width: 100%;
             max-width: 700px;
+     
         }
+      
        </style>
-    <div class="navbar">        
+    <div class="sticky-navbar">        
         <a href="index.html" >หน้าหลัก</a>
         <a href="information.html" >ข้อมูลทั่วไปขององค์การ</a>
         <a href="news.html">ข่าวประชาสัมพันธ์</a>
 </div>
 
+
 <div class="สำนักงาน">
-    <img src="Image/สำนักงาน.png" width="700" height="100">
+    <img src="Image/สำนักงาน.png" width="700" height="100" style="margin-top: 200px;">
 </div>
-    
+
     <br><div class="hotel">
     <img src="Image/ป้ายหน้าตึก.jpg" width="700" height="500">
 </div>
@@ -94,7 +123,7 @@
         
         <br><div class="ข้อมูลสำนักงาน">
         <font style="color:rgb(0, 0, 0)">สำนักงานองค์การนักวิชาชีพในอนาคตแห่งประเทศไทย วิทยลัยเทคนิคจันทบุรี
-        <br>ตั้งอยู่ชั้นที่ ๑ อาคารวิทยบริการ วิทยาลัยเทคนิคจันทบุรี มีขนาดพื้นที่ ๑๑๔.๔0 ตารางเมตร</p></font>
+        <br>ตั้งอยู่ชั้นที่ ๑ อาคารวิทยบริการ วิทยาลัยเทคนิคจันทบุรี มีขนาดพื้นที่ ๑๑๔.๔๐ ตารางเมตร</p></font>
 </div>
 
 </div>
